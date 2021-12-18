@@ -4,11 +4,11 @@
 
 Firstly, please set up a virtual environment and install the python packages in requirement.txt
 
-Secondly, run '''python3 scraping.py''' to scrape top songs from spotify website. You could change the start date and end date to scrape tracks from mutiple dates
+Secondly, run `python3 scraping.py` to scrape top songs from spotify website. You could change the start date and end date to scrape tracks from mutiple dates
 
-Thirdly, run '''python3 webapi_and_build_db.py''' to get information using spotify's web API to retrive detailed information and popularity. It will also build a database and cache the data in data.json. Please change the secret and key if you want to use the code in other projects
+Thirdly, run `python3 webapi_and_build_db.py` to get information using spotify's web API to retrive detailed information and popularity. It will also build a database and cache the data in data.json. Please change the secret and key if you want to use the code in other projects
 
-Finally, you could run '''flask run''' to run the app
+Finally, you could run `flask run` to run the app
 
 ## Part 2: Data Sources
 
