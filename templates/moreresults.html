@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>Songs: Results</title>
+</head>
+
+<style> 
+    body{font-family:'Open Sans'; text-align:center;}  
+    </style>
+
+<body>
+    <h1>Here are your results! (Marry Christmas!! )</h1>
+    
+    <br>
+    <h2>- About {{moreresults[0][1]}} - </h2>
+    <h3>Records by scraping spotify top hits</h3>
+    <table border="1" cellpadding="3" cellspacing="0" style="width: 80%;margin:auto">
+        <tr>
+            <th>Track</th>
+            <th>Artist</th>
+            <th>Rank</th>
+        </tr>
+        {% for row in moreresults %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<br>
+<br>
+<h3>More Info from Spotify API</h3>
+<table border="1" cellpadding="3" cellspacing="0" style="width: 80%;margin:auto">
+    <tr>
+        <th>artist_name</th>
+        <th>track_name</th>
+        <th>popularity</th>
+    </tr>
+    {% for row in spotify results %}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<br>
+
+<h3>Here is the graph about the popularity!</h3>
+{{plot_div | safe}}
+
+
+
+</body>
+<footer>
+    <br>
+    <br>
+</footer>
+</html>

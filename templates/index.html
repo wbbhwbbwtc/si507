@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF8"/>
+        <title>Hit songs Browser</title>
+    </head>
+
+    <style>
+    .center{text-align: center;}  
+    body{font-family:'Open Sans'; text-align:center;}  
+    </style>
+    <body>
+        <br>
+        <h1><div class="center">Welcome to Leyi's SI507 Project!</div></h1>
+        <br>
+        <div class="center"><img src="https://drive.google.com/uc?export=view&id=1Uxk4GzWouX2gBkrGXYqrwK01N6KuWY2z" width="50%" alt="songs1" /></div>
+        <br>
+        <h2><div class="center">Let's see top songs by scraping Spotify's website </div></h2>
+
+    <h3><form action='/results' method='POST'>
+        <p>
+        Sort by: &nbsp&nbsp
+            <input type='radio' name='sort' 
+                    value='ranking' checked='checked'/> Ranking &nbsp
+            <input type='radio' name='sort' 
+                    value='track name'/>Track Name &nbsp
+            <input type='radio' name='sort' 
+                    value='artist name'/>Artist Name &nbsp
+        </p>
+
+        <p>
+            Filter by range: &nbsp&nbsp
+                <select name='region'style="font-size:14px;">
+                    <option value='All'>100 records</option>
+                    <option value='50'>50 records</option>
+                    <option value='30'>30 records</option>
+                    <option value='10'>10 records</option>
+                </select>
+    
+            </p>
+
+        <input type='submit' value='Get Top Hits List' style="font-size:20px;"/>
+        </form>
+    </h3>
+
+        <!-- <p><div class="center"><a href='/songs/hits'>Hot 200 songs from Spotify</a></div></p>
+        <p><div class="center"><a href='/songs/tracks'>What are hits from those artists</a></div></p> -->
+   
+        <div></div>
+       <br>
+
+        <h2><div class="center">You can also search by the ranking number</div></h2>
+        <h2><div class="center">to get more info spotify API</div></h2>
+        <h3><form action='/moreresults' method='POST'>
+        <p>
+        Choose a rank number &nbsp&nbsp<input name="number" type="text"/><br/>
+        </p>
+        <p>
+            <input type='checkbox' name='plot'/>Need Plot Results?<br/>
+        </p>
+        <input type='submit' value='Get details about this artist' style="font-size:20px;"/>
+        </form>
+
+    </body>
+    <footer>
+        <br>
+        <br>
+
+    </footer>
+    </html>
